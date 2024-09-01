@@ -13,12 +13,12 @@ const Navbar: React.FC<NavbarProps> = ({ title, links }) => {
   const pathname = usePathname();
 
   return (
-    <nav className="bg-gray-800 py-4 rounded-full mx-8 mt-2 sticky top-0 z-[100]">
+    <nav className="bg-gray-800 py-4 sticky top-0 z-[100]">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-white font-bold text-xl ml-7">
+        <div className="text-white font-bold text-xl ml-2">
           <Link href="/">{title}</Link>
         </div>
-        <div className="mr-7">
+        <div className="mr-2">
           <ul className="flex space-x-4">
             {links.map((link, index) => {
               const isActive = pathname === link.href;
